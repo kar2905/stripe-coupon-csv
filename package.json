@@ -1,0 +1,26 @@
+{
+  name: "stripe-coupon-csv",
+  version: "0.1",
+  description: "Create coupons from CSV",
+  main: "index.js",
+  repository: {
+  type: "git",
+  url: "https://github.com/kar2905/stripe-coupon-csv"
+  },
+  keywords: [
+  "stripe",
+  "payments",
+  "credit card",
+  "banking"
+  ],
+  author: "Kartik Mandaville",
+  license: "MIT",
+  bugs: {
+  url: "https://github.com/kar2905/stripe-coupon-csv/issues"
+  },
+  dependencies: {
+  stripe: "~3.6.0",
+  fs: "~0.0.2",
+  fast-csv: "~2.1.0",
+  }
+}
