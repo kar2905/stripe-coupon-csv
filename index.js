@@ -7,6 +7,7 @@ var csv = require('fast-csv');
 
 //filename here
 var stream = fs.createReadStream("coupons.csv");
+var amount_off = 99*100;
 
 stream.pipe( csv().on("data", function(data){
 
@@ -18,7 +19,7 @@ stream.pipe( csv().on("data", function(data){
         function(err, coupon){
           if(!coupon){
             stripe.coupons.create({
-              amount_off: 7900,
+              amount_off: amount_off,
               duration: 'once',
               id: data[0],
               max_redemptions: 1,
